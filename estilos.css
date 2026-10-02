@@ -1,0 +1,800 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
+
+html { 
+    scroll-behavior: smooth; 
+} 
+
+body { 
+    font-family: Arial, sans-serif; 
+    background: #0f1c14; /* Verde selva profundo */ 
+    color: #f4f6f0; /* Blanco crema suave */ 
+} 
+
+
+/* MENÚ ENCABEZADO */ 
+.encabezado { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background: rgba(15, 28, 20, 0.85); /* Fondo oscuro natural con transparencia */ 
+    backdrop-filter: blur(10px); 
+} 
+
+.menu { 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 12px 25px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+} 
+
+/* Alineación del Logo e Imagen */
+.logo { 
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre el logo circular y el texto */
+    color: #f4f6f0; 
+    text-decoration: none; 
+    font-size: 20px; 
+    font-weight: bold; 
+} 
+
+/* Imagen del Logo */
+.logo-img {
+    height: 45px; /* Altura idónea para que el logo resalte sin deformar el menú */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%; /* Opcional: resalta la forma circular de tu insignia */
+}
+
+/* Enlaces del menú */
+.menu-links { 
+    display: flex; 
+    gap: 30px; 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+} 
+
+.menu-links a { 
+    color: #f4f6f0; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s; 
+} 
+
+.menu-links a:hover { 
+    color: #e5a93c; /* Dorado maduro de Jackfruit */ 
+} 
+
+.menu-btn { 
+    display: none; 
+    background: none; 
+    border: none; 
+    color: #f4f6f0; 
+    font-size: 28px; 
+    cursor: pointer; 
+}
+
+/* HERO */ 
+
+.hero { 
+    height: 100vh; 
+
+    position: relative; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+    overflow: hidden; 
+} 
+
+.video-fondo { 
+    position: absolute; 
+
+    width: 100%; 
+    height: 100%; 
+
+    object-fit: cover; 
+} 
+
+.capa { 
+    position: absolute; 
+
+    width: 100%; 
+    height: 100%; 
+
+    background: rgba(12, 22, 16, 0.65); /* Filtro sombrío para resaltar texto */ 
+} 
+
+.hero-contenido { 
+    position: relative; 
+
+    z-index: 2; 
+
+    max-width: 850px; 
+
+    padding: 20px; 
+
+    text-align: center; 
+} 
+
+.etiqueta { 
+    margin-bottom: 15px; 
+
+    color: #e5a93c; /* Amarillo dorado orgánico */ 
+
+    font-size: 14px; 
+
+    letter-spacing: 4px; 
+} 
+
+.hero-contenido h1 { 
+    margin-bottom: 20px; 
+
+    font-size: 70px; 
+} 
+
+.hero-contenido p:not(.etiqueta) { 
+    margin-bottom: 30px; 
+
+    font-size: 20px; 
+
+    line-height: 1.6; 
+} 
+
+
+/* BOTONES */ 
+
+.boton { 
+    display: inline-block; 
+
+    padding: 14px 28px; 
+
+    border: none; 
+
+    border-radius: 30px; 
+
+    background: #cab70a; /* Verde hoja/finca */ 
+
+    color: white; 
+
+    text-decoration: none; 
+
+    font-weight: bold; 
+
+    cursor: pointer; 
+
+    transition: 0.3s; 
+} 
+
+.boton:hover { 
+    background: #2d5437; /* Verde más oscuro al pasar el cursor */ 
+
+    transform: translateY(-3px); 
+} 
+
+
+/* SECCIONES */ 
+
+.seccion { 
+    padding: 110px 20px; 
+} 
+
+.contenedor { 
+    max-width: 1100px; 
+
+    margin: auto; 
+} 
+
+.seccion h2 { 
+    margin-bottom: 15px; 
+
+    text-align: center; 
+
+    font-size: 42px; 
+} 
+
+.subtitulo { 
+    margin-bottom: 10px; 
+
+    text-align: center; 
+
+    color: #e5a93c; 
+
+    font-size: 13px; 
+
+    font-weight: bold; 
+
+    letter-spacing: 3px; 
+} 
+
+.descripcion { 
+    max-width: 700px; 
+
+    margin: 0 auto 45px; 
+
+    text-align: center; 
+
+    color: #c2cbbd; /* Verde grisáceo suave */ 
+
+    line-height: 1.6; 
+} 
+
+
+/* VIDEOS */ 
+
+.videos-grid { 
+    display: grid; 
+
+    grid-template-columns: repeat(3, 1fr); 
+
+    gap: 25px; 
+} 
+
+.video-card { 
+    overflow: hidden; 
+
+    background: #18281d; /* Verde musgo oscuro */ 
+
+    border-radius: 16px; 
+
+    transition: 0.3s; 
+} 
+
+.video-card:hover { 
+    transform: translateY(-8px); 
+} 
+
+
+/* REPRODUCTOR */ 
+
+.video { 
+    width: 100%; 
+
+    aspect-ratio: 16 / 9; 
+
+    background: #09110c; 
+} 
+
+.video iframe { 
+    width: 100%; 
+
+    height: 100%; 
+
+    display: block; 
+
+    border: none; 
+} 
+
+
+/* INFORMACIÓN DEL VIDEO */ 
+
+.video-info { 
+    padding: 22px; 
+} 
+
+.video-info h3 { 
+    margin-bottom: 10px; 
+
+    font-size: 21px; 
+} 
+
+.video-info p { 
+    color: #c2cbbd; 
+
+    line-height: 1.5; 
+} 
+
+
+/* CONTENIDO */ 
+/* Sección de Productos */
+.productos {
+    padding: 60px 20px;
+    background-color: #283309;
+    text-align: center;
+}
+
+.contenido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Tarjeta de Producto */
+.tarjeta-producto {
+    background-color: #c9d19c;
+    border: 1px solid #1f3d03;
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icono-producto {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-producto h3 {
+    color: #2e7d32;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.tarjeta-producto p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botón directo de pedido/contacto */
+.btn-producto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-producto:hover {
+    background-color: #c9d19c;
+}
+
+.contenido { 
+    background: #142218; /* Transición suave de sección */ 
+} 
+
+.contenido-grid { 
+    display: grid; 
+
+    grid-template-columns: repeat(3, 1fr); 
+
+    gap: 25px; 
+
+    margin-top: 45px; 
+} 
+
+.tarjeta { 
+    padding: 35px; 
+
+    background: #c9d19c; /* Tarjeta verde bosque */ 
+
+    border-radius: 16px; 
+
+    text-align: center; 
+
+    transition: 0.3s; 
+} 
+
+.tarjeta:hover { 
+    transform: translateY(-8px); 
+} 
+
+.tarjeta span { 
+    font-size: 45px; 
+} 
+
+.tarjeta h3 { 
+    margin: 15px 0; 
+} 
+
+.tarjeta p { 
+    color: #0f0f0f; 
+
+    line-height: 1.6; 
+} 
+
+
+/* NOSOTROS */ 
+
+/* Sección Nosotros */
+.nosotros {
+    background-color: #2e3d2f; /* Fondo oscuro recomendado para que resalte el texto blanco */
+    color: #ffffff;             /* Hace todo el texto blanco dentro de la sección */
+    padding: 60px 20px;
+}
+
+/* Subtítulo */
+.nosotros .subtitulo {
+    color: #e5a93c; /* Color claro/verde menta para contrastar con el fondo */
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Título principal H2 */
+.nosotros h2 {
+    color: #ffffff; /* Texto del título en blanco */
+    margin-bottom: 20px;
+}
+
+/* Párrafos de descripción */
+.nosotros-descripcion p {
+    color: #ffffff; /* Párrafos en texto blanco */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Si tienes las tarjetas de Misión y Visión dentro de esta sección */
+.nosotros .tarjeta {
+    background-color: rgba(161, 177, 131, 0.1); /* Fondo semi-transparente */
+    border: 1px solid rgba(221, 245, 135, 0.2);
+    color: #ffffff;
+}
+
+.nosotros .tarjeta h3 {
+    color: #ffffff; /* Títulos de las tarjetas en blanco */
+}
+
+.nosotros .tarjeta p {
+    color: #e0e0e0; /* Blanco suave/gris claro para mejor lectura */
+}
+
+
+/* CONTACTO */ 
+
+.contacto { 
+    background: #5c634e; 
+
+    text-align: center; 
+} 
+
+form { 
+    max-width: 600px; 
+
+    margin: 40px auto 0; 
+
+    display: flex; 
+
+    flex-direction: column; 
+
+    gap: 15px; 
+} 
+
+input, 
+textarea { 
+    width: 100%; 
+
+    padding: 15px; 
+
+    border: 1px solid #283e2e; 
+
+    border-radius: 8px; 
+
+    outline: none; 
+
+    font-family: Arial, sans-serif; 
+
+    font-size: 15px; 
+
+    background: #0f1c14; 
+
+    color: #f4f6f0; 
+} 
+
+input::placeholder,
+textarea::placeholder {
+    color: #839185;
+}
+
+textarea { 
+    resize: vertical; 
+} 
+/* Layout en Grid para separar Info y Formulario */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Columna de información */
+.contacto-info {
+    background-color: #9c884c;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #d6a913; /* Línea verde decorativa */
+}
+
+.contacto-info h3 {
+    margin-top: 0;
+    color: #2e7d32;
+    font-size: 1.4rem;
+}
+
+.info-item {
+    margin: 20px 0;
+    font-size: 1.05rem;
+}
+
+.info-label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-valor {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-valor:hover {
+    text-decoration: underline;
+}
+
+/* Redes Sociales */
+.redes-contacto h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.redes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.red-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.red-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Formulario */
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+    border-color: #dbe4db;
+}
+
+.boton {
+    background-color: #1c421e;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #1b5e20;
+}
+
+/* FOOTER */ 
+
+footer {
+    background-color: #2e3d2f; /* Ajusta el color al fondo de tu web */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Contenedor de iconos */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo individual de las redes sociales */
+.redes-sociales a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efectos al pasar el cursor (Hover) */
+.redes-sociales a:hover {
+    background-color: #4caf50; /* Puedes usar tu verde corporativo */
+    transform: translateY(-3px);
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+
+/* ==========================================
+   1. REGLAS GLOBALES FLUIDAS (Para todas las pantallas)
+   ========================================== */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Evita desbordamientos en cualquier pantalla */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor fluido con margen inteligente */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   2. PANTALLAS PEQUEÑAS Y MÓVILES (Hasta 576px)
+   ========================================== */
+@media (max-width: 576px) {
+    .logo span {
+        font-size: 16px; /* Reduce el tamaño del texto del logo en pantallas muy pequeñas */
+    }
+
+    .logo-img {
+        height: 38px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 32px; /* Tamaño de título cómodo para teléfonos */
+    }
+
+    .seccion {
+        padding: 50px 15px; /* Menos relleno en móviles para aprovechar espacio */
+    }
+
+    .tarjeta, .tarjeta-producto {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ==========================================
+   3. TABLETS Y MÓVILES GRANDES (Hasta 768px)
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* Menú desplegable para móviles y tablets verticales */
+    .menu-links { 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        display: none; 
+        flex-direction: column; 
+        gap: 20px; 
+        padding: 25px; 
+        background: #0f1c14; 
+        text-align: center; 
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    } 
+
+    .menu-links.activo { 
+        display: flex; 
+    } 
+
+    .menu-btn { 
+        display: block; 
+    } 
+
+    /* Grillas a 1 sola columna */
+    .videos-grid,
+    .contenido-grid,
+    .contacto-grid,
+    .tarjetas-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    } 
+}
+
+
+/* ==========================================
+   4. TABLETS HORIZONTALES Y LAPTOPS PEQUEÑAS (769px a 1024px)
+   ========================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-contenido h1 {
+        font-size: 42px;
+    }
+
+    .contenido-grid,
+    .tarjetas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+
+    .seccion {
+        padding: 60px 25px;
+    }
+}
+
+
+/* ==========================================
+   5. PANTALLAS GRANDES Y MONITORES 4K (Más de 1400px)
+   ========================================== */
+@media (min-width: 1400px) {
+    .contenedor {
+        max-width: 1350px; /* Expande el diseño limpiamente en monitores grandes */
+    }
+
+    .hero-contenido h1 {
+        font-size: 56px;
+    }
+}

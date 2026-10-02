@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JACK RIO NEGRO E.I.R.L</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    
+    <div class="contenedor header-contenido">
+
+        <!-- Marca: Logo + Título -->
+    <nav class="menu">
+
+        <a href="#" class="logo">
+    <img src="img/logo-img.png" alt="Logo Jack Fruit" class="logo-img">
+    FINCA JACK FRUIT
+            <a href="#inicio" class="logo">
+                
+            </a>
+
+            <ul class="menu-links">
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#videos">Videos</a>
+                </li>
+
+                <li>
+                    <a href="#contenido">Productos</a>
+                </li>
+
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+
+            <button class="menu-btn" onclick="mostrarMenu()">
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- INICIO -->
+<section id="inicio" class="hero">
+
+    <video
+        class="video-fondo"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto">
+
+        <!-- Asegúrate de que la ruta sea exactamente minúscula y el archivo exista en esa carpeta -->
+        <source src="videos/fondo.mp4" type="video/mp4">
+
+        Tu navegador no permite reproducir videos.
+
+    </video>
+
+    <div class="capa"></div>
+
+    <div class="hero-contenido">
+        <p class="etiqueta">
+            NATURALEZA • CULTURA • EXPERIENCIA
+        </p>
+
+        <h1>
+            Explora Nuestra Finca
+        </h1>
+
+        <p>
+            Descubre la magia de la selva, conoce, disfruta y vive una experiencia única
+            en contacto con la naturaleza.
+        </p>
+
+        <a href="#videos" class="boton">
+            Conoce más 
+        </a>
+    </div>
+
+</section>
+
+
+        <!-- VIDEOS -->
+
+        <section id="videos" class="seccion">
+
+            <div class="contenedor">
+
+                <p class="subtitulo">
+                    NUESTROS VIDEOS
+                </p>
+
+                <h2>
+                    Mira y descubre
+                </h2>
+
+                <p class="descripcion">
+                    Reproduce los videos directamente
+                    dentro de nuestra página.
+                </p>
+
+
+                <div class="videos-grid">
+
+
+                    <!-- VIDEO 1 -->
+
+                    <article class="video-card">
+
+                        <div class="video">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/a9ZOfFQ21ac"
+                                title="Video destacado"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="video-info">
+
+                            <h3>
+                                Video destacado
+                            </h3>
+
+                            <p>
+                                Disfruta de este contenido
+                                directamente en nuestra página.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 2 -->
+
+                    <article class="video-card">
+
+                        <div class="video">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/CQlIDotx1eU"
+                                title="Experiencias"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="video-info">
+
+                            <h3>
+                                Experiencias
+                            </h3>
+
+                            <p>
+                                Descubre nuevas experiencias
+                                mediante nuestros videos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VIDEO 3 -->
+
+                    <article class="video-card">
+
+                        <div class="video">
+
+                            <iframe
+                                src="https://www.youtube.com/embed/TJCV5hfq8u8"
+                                title="Inspiración"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="video-info">
+
+                            <h3>
+                                Inspiración
+                            </h3>
+
+                            <p>
+                                Encuentra inspiración para
+                                tus proyectos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENIDO -->
+
+        <section id="productos" class="seccion productos">
+    <div class="contenedor">
+
+        <p class="subtitulo">
+            DESCUBRE NUESTRA COSECHA
+        </p>
+
+        <h2>
+            Nuestros Productos
+        </h2>
+
+        <div class="contenido-grid">
+
+            <!-- Producto 1 -->
+            <article class="tarjeta-producto">
+                <div class="icono-producto">🍈</div>
+                <h3>Jack Fruit Fresco</h3>
+                <p>
+                    Fruta fresca seleccionada directamente del campo. Ideal para consumirla al natural o como sustituto vegetal de la carne por su textura única.
+                </p>
+                <a href="#contacto" class="btn-producto">Consultar / Pedir</a>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="tarjeta-producto">
+                <div class="icono-producto">🥭</div>
+                <h3>Frutas Exóticas de Estación</h3>
+                <p>
+                    Surtido de frutas exóticas de nuestra finca, cultivadas con prácticas sostenibles para garantizar el máximo sabor y frescura.
+                </p>
+                <a href="#contacto" class="btn-producto">Consultar / Pedir</a>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="tarjeta-producto">
+                <div class="icono-producto">🍯</div>
+                <h3>Pulpas y Derivados</h3>
+                <p>
+                    Pulpa congelada 100% natural de Jackfruit y frutas exóticas, lista para preparar jugos, batidos, postres y recetas gastronómicas.
+                </p>
+                <a href="#contacto" class="btn-producto">Consultar / Pedir</a>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- NOSOTROS -->
+
+       <section id="nosotros" class="seccion nosotros">
+    <div class="contenedor">
+
+        <p class="subtitulo">CONÓCENOS</p>
+        <h2>Nosotros</h2>
+
+        <div class="nosotros-descripcion">
+            <p>
+                Somos una finca dedicada al cultivo y producción de
+                Jack Fruit y frutas exóticas, con un enfoque sostenible
+                y responsable con el medio ambiente.
+            </p>
+            <p>
+                Nuestro compromiso es ofrecer productos de la más alta 
+                calidad, frescos y naturales, llevando lo mejor del campo a tu hogar. 
+            </p>
+        </div>
+
+        <!-- Contenedor de las tarjetas de Misión y Visión -->
+        <div class="tarjetas-grid">
+            
+            <div class="tarjeta">
+                <h3>Nuestra Misión</h3>
+                <p>
+                    Producir y comercializar frutas exóticas de alta calidad,
+                    promoviendo el bienestar de nuestros clientes y el desarrollo 
+                    de nuestra comunidad.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nuestra Visión</h3>
+                <p>
+                    Ser reconocidos como líderes en la producción sostenible
+                    de Jack Fruit y frutas exóticas, innovando constantemente 
+                    para un futuro mejor.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+        <!-- CONTACTO -->
+
+        <section id="contacto" class="seccion contacto">
+    <div class="contenedor">
+
+        <p class="subtitulo">ESCRÍBENOS</p>
+        <h2>Contacto</h2>
+
+        <p class="descripcion">
+            ¿Quieres comunicarte con nosotros? Estamos aquí para ayudarte.
+        </p>
+
+        <!-- Contenedor principal de contacto -->
+        <div class="contacto-grid">
+
+            <!-- Columna izquierda: Datos directos y Redes Sociales -->
+            <div class="contacto-info">
+                <h3>Información de Contacto</h3>
+                <p class="info-texto">
+                    También puedes escribirnos o visitarnos a través de nuestras redes sociales:
+                </p>
+
+                <div class="info-item">
+                    <span class="info-label">Teléfono / WhatsApp:</span>
+                    <a href="https://wa.me/51962855943" target="_blank" class="info-valor">+51 962 855 943</a>
+                    <a href="https://wa.me/51962855943" target="_blank" class="info-valor">+51 977 770 014</a>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="redes-contacto">
+                    <h4>Síguenos en nuestras redes:</h4>
+                    
+                    <div class="redes-lista">
+                        <!-- Facebook -->
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="red-item facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                            <span>Facebook:</span>
+                            <p>Finca Jack Fruit</p>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="red-item instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <span>Instagram:</span>
+                            <p>Finca Jack Fruit</p>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="red-item tiktok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V5.8a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 12a6.34 6.34 0 0 0 6.34 6.34 6.35 6.35 0 0 0 6.33-6.34V8.3a8.16 8.16 0 0 0 3.92 1V5.83a4.85 4.85 0 0 1-.00-.86z"/>
+                            </svg>
+                            <span>TikTok:</span>
+                            <p>Finca Jack Fruit</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Formulario -->
+            <form class="contacto-formulario">
+                <div class="campo">
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                
+                <div class="campo">
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+
+                <div class="campo">
+                    <textarea placeholder="Escribe tu mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="boton">
+                    Enviar mensaje
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+    </main>
+
+
+    <footer>
+    <div class="footer-contenedor">
+        <!-- Redes Sociales -->
+        <div class="redes-sociales">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+            </a>
+            
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+
+            <a href="https://wa.me/51000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Derechos de Autor -->
+        <p class="copyright">
+            © 2026 Jack Fruit Río Negro. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
